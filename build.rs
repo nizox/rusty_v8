@@ -94,8 +94,8 @@ fn build_v8() {
   if env::var("TARGET").unwrap() == "x86_64-unknown-linux-musl" {
     gn_args.push("use_glib=false".to_string());
     gn_args.push("use_gold=true".to_string());
-    //gn_args.push("use_custom_libcxx=true".to_string());
-    //gn_args.push("use_custom_libunwind=true".to_string());
+    gn_args.push("use_custom_libcxx=true".to_string());
+    gn_args.push("use_custom_libunwind=true".to_string());
     gn_args.push("use_musl_libc=true".to_string());
   };
 
